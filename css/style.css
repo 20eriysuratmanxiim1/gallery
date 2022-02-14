@@ -100,7 +100,34 @@ h1{
 .overlay:target .close{
     animation: slideDownFade .5s .5s forwards;
 }
+.overlay:target .next,
+.overlay:target .prev{
+    animation: fade .5s .5s forwards;
+}
+.next, .prev{
+    width: 53px;
+    height: 90px;
+    background-image: url(/img/next.png);
+    position: absolute;
+    top: 40%;
+    margin-left: 50px;
+    text-indent: -9999px;
+    opacity: 0;
+}
+.prev{
+    background-image: url(/img/prev.png);
+    margin-left: -100px;
+}
 /* Animasi */
+@keyframes fade {
+    0%{
+        opacity: 0;
+
+    }
+    100%{
+        opacity: 1;
+    }
+}
 @keyframes zoomDanFade {
     0% {
         transform: scale(0);
